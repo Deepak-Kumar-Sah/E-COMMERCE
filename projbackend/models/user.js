@@ -53,12 +53,12 @@ userSchema.virtual("password")
       return this._password
    })
 
-userSchema.method = {
+userSchema.methods = {
    authentication:function(plainpassword){
-      return this.securePassword(plainpassword)==this.encry_password
+      return this.securePassword(plainpassword)===this.encry_password
    },
    securePassword:function(plainpassword){
-      if(!password) return "";
+      if(!plainpassword) return "";
       try {
          return crypto.createHmac('sha256',this.salt)
          .update(plainpassword)
