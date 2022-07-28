@@ -85,5 +85,6 @@ exports.isAdmin = (req,res,next)=>{
             error:"Your are not ADMIN,Access denied"
         });
     }
+   
     next();
 };
