@@ -88,5 +88,5 @@ export const updateProduct = (productId,userId,token,product) =>{
     }).then(response =>{
         return response.json()
     })
-    .catch(err=>console.log(err))
+    .catch(console.log(product))
 }
